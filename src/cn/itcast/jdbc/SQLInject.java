@@ -15,7 +15,7 @@ public class SQLInject {
 		
 		
 		
-		read1("zhangsan");
+//		read1("zhangsan");
 		
 	}
 	
@@ -38,8 +38,9 @@ static void read(String name) throws Exception { //´ËËÙ¶È¿ìÓÚÔ¤´¦Àí, Ã»ÓĞ²ÎÊıÊ±¿
 			
 			// ´¦Àí½á¹û
 			while(rs.next()) {
-				System.out.println(rs.getObject("id") + "\t" + rs.getObject("birthday") + "\t" 
-			+ rs.getObject("name") + "\t" + rs.getObject("money"));
+				System.out.println(rs.getInt("id") + "\t" + rs.getDate("birthday") // Ö»ÓĞÈÕÆÚ, Ã»ÓĞÊ±¼ä
+				+ "\t" 
+			+ rs.getString("name") + "\t" + rs.getFloat("money"));
 			}
 			long end = System.currentTimeMillis();
 			System.out.println("read:" + (end - start));
