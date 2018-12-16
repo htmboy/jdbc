@@ -9,6 +9,21 @@ public class User {
 	private Date birthday;
 	private float money;
 	
+	public User(String name) {
+		this.name = name;
+	}
+	
+	public User(float money) {
+		this.money = money;
+	}
+	
+	public String toString() {
+		return "id=" + this.id + "name=" + this.name + "birthday=" + this.birthday + "money=" + this.money;
+	}
+	
+	public User() {
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -34,5 +49,12 @@ public class User {
 		this.money = money;
 	}
 	
+	private void test() {
+		
+	}
+	
+	public void showName() {
+		System.out.println(this.name);
+	}
 	
 }

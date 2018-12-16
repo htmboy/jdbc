@@ -14,7 +14,12 @@ public class Base {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		template();
+		// template();
+		for(int i = 0; i < 13; i++) {
+			Connection conn = JdbcUtils.getConnection();
+			System.out.println(conn);
+			JdbcUtils.free(null, null, conn);
+		}
 	}
 	
 	static void template() throws Exception {
